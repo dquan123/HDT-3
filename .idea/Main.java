@@ -7,13 +7,14 @@ public class Main {
         for (int num : vector) {
             System.out.print(num + " ");
         }
+        System.out.println("Original");
 
-        System.out.println("Ordenado I");
-        int[] resultado = o.ordenamientoPorInsercion(vector);
+        int[] resultado1 = o.ordenamientoPorInsercion(vector);
 
-        for (int num : resultado) {
+        for (int num : resultado1) {
             System.out.print(num + " ");
         }
+        System.out.println("Insertion");
 
     }
 }
