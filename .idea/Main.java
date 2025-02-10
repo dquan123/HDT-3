@@ -12,10 +12,6 @@ public class Main {
         BucketSort o5 = new BucketSort();
         HeapSort o6 = new HeapSort();
 
-        System.out.print("Ingrese el tamaño del vector: ");
-        int tamano = scan.nextInt();
-        int[] vector = generarVectorAleatorio(tamano);
-
         boolean seguir = true;
 
         while (seguir) {
@@ -30,6 +26,19 @@ public class Main {
             System.out.print("Escoga una opcion: ");
 
             int opcion = scan.nextInt();
+            if (opcion == 7) {
+                System.out.println("Sesion cerrada");
+                seguir = false;
+                break;
+            }
+            if (opcion < 1 || opcion > 7) {
+                System.out.println("Opcion invalida, intenta de nuevo.");
+                continue;
+            }
+
+            System.out.print("Ingrese el tamaño del vector: ");
+            int tamano = scan.nextInt();
+            int[] vector = generarVectorAleatorio(tamano);
 
             switch (opcion) {
                 case 1:
@@ -50,12 +59,6 @@ public class Main {
                 case 6:
                     procesarOpcion("Heap", o6.ordenamientoHeapSort(vector));
                     break;
-                case 7:
-                    System.out.println("Sesion cerrada");
-                    seguir = false;
-                    break;
-                default:
-                    System.out.println("Opcion invalida, intenta de nuevo.");
             }
         }
         scan.close();
