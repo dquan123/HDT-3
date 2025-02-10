@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
         InsertionSort o = new InsertionSort();
         MergeSort o2 = new MergeSort();
         QuickSort o3 = new QuickSort();
@@ -8,6 +11,20 @@ public class Main {
         HeapSort o6 = new HeapSort();
         int[] vector = {4,5,23,53,1,5,5,54,63,3};
 
+        boolean seguir = true;
+
+        while(seguir){
+            System.out.println("\n===== MENU DE ORDENAMIENTO =====");
+            System.out.println("1. Insertion sort");
+            System.out.println("2. Merge sort");
+            System.out.println("3. Quick Sort");
+            System.out.println("4. Radix Sort");
+            System.out.println("5. Bucket Sort");
+            System.out.println("6. Heap Sort");
+            System.out.println("7. Mostrar el vector original");
+            System.out.println("8. Salir");
+            System.out.println("Eliga una opcion.");
+        }
 
         for (int num : vector) {
             System.out.print(num + " ");
@@ -45,6 +62,7 @@ public class Main {
             System.out.print(num + " ");
         }
         System.out.println("Heap");
-
     }
+
+
 }
